@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pooja Bassin — Doctoral Researcher</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink: #1a1a18;
+    --paper: #f5f2eb;
+    --accent: #c85a2a;
+    --muted: #7a7670;
+    --rule: #d8d3c8;
+    --highlight: #e8e2d6;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1rem 2.5rem;
+    background: var(--paper);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .nav-logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.01em;
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex; gap: 2rem; list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--ink); }
+
+  /* ── HERO ── */
+  .hero {
+    padding: 10rem 2.5rem 5rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .hero-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--accent);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    line-height: 1.05;
+    color: var(--ink);
+    margin-bottom: 1.25rem;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .hero-desc {
+    font-size: 1.05rem;
+    color: var(--muted);
+    max-width: 580px;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+
+  .hero-links {
+    display: flex; gap: 1rem; flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    padding: 0.55rem 1.2rem;
+    font-size: 0.82rem;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+
+  .btn-primary {
+    background: var(--ink);
+    color: var(--paper);
+    border: 1.5px solid var(--ink);
+  }
+  .btn-primary:hover { background: var(--accent); border-color: var(--accent); }
+
+  .btn-ghost {
+    background: transparent;
+    color: var(--ink);
+    border: 1.5px solid var(--rule);
+  }
+  .btn-ghost:hover { border-color: var(--ink); }
+
+  /* ── DIVIDER ── */
+  .divider {
+    width: 100%; height: 1px;
+    background: var(--rule);
+    margin: 0 auto;
+    max-width: 900px;
+  }
+
+  /* ── SECTIONS ── */
+  section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 2.5rem;
+  }
+
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 2rem;
+    display: flex; align-items: center; gap: 0.75rem;
+  }
+
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+
+  h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 1.25rem;
+  }
+
+  /* ── ABOUT ── */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+    color: var(--muted);
+    line-height: 1.9;
+    margin-bottom: 1rem;
+  }
+
+  .interests-grid {
+    display: flex; flex-direction: column; gap: 0.6rem;
+  }
+
+  .interest-tag {
+    display: inline-block;
+    background: var(--highlight);
+    color: var(--ink);
+    font-size: 0.82rem;
+    padding: 0.3rem 0.75rem;
+    border-radius: 2px;
+  }
+
+  .status-box {
+    margin-top: 1.5rem;
+    padding: 1.25rem 1.5rem;
+    border-left: 3px solid var(--accent);
+    background: var(--highlight);
+  }
+
+  .status-box .label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.25rem;
+  }
+
+  .status-box p {
+    font-size: 0.9rem;
+    color: var(--ink);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  /* ── PUBLICATIONS ── */
+  .pub-list {
+    display: flex; flex-direction: column; gap: 0;
+  }
+
+  .pub-item {
+    display: grid;
+    grid-template-columns: 2.5rem 1fr;
+    gap: 1rem;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .pub-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--accent);
+    padding-top: 0.15rem;
+    font-weight: 500;
+  }
+
+  .pub-content {}
+
+  .pub-title {
+    font-weight: 500;
+    font-size: 0.92rem;
+    color: var(--ink);
+    margin-bottom: 0.25rem;
+    line-height: 1.5;
+  }
+
+  .pub-title a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+    transition: border-color 0.2s;
+  }
+  .pub-title a:hover { border-color: var(--accent); color: var(--accent); }
+
+  .pub-meta {
+    font-size: 0.8rem;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  .pub-venue {
+    font-style: italic;
+  }
+
+  .pub-badge {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-family: 'DM Mono', monospace;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.15rem 0.45rem;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 2px;
+    margin-left: 0.4rem;
+    vertical-align: middle;
+  }
+
+  /* ── PROJECTS ── */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    padding: 1.5rem;
+    background: var(--highlight);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    transition: border-color 0.2s;
+  }
+
+  .project-card:hover { border-color: var(--ink); }
+
+  .project-card h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .project-card p {
+    font-size: 0.85rem;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  .project-card a {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-size: 0.78rem;
+    font-family: 'DM Mono', monospace;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  /* ── TIMELINE ── */
+  .timeline {
+    position: relative;
+  }
+
+  .tl-year {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.4rem;
+    color: var(--accent);
+    margin: 2rem 0 1rem;
+  }
+
+  .tl-year:first-child { margin-top: 0; }
+
+  .tl-event {
+    display: grid;
+    grid-template-columns: 8rem 1fr;
+    gap: 1.5rem;
+    padding: 0.75rem 0;
+    border-top: 1px solid var(--rule);
+  }
+
+  .tl-date {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--muted);
+    padding-top: 0.1rem;
+  }
+
+  .tl-text {
+    font-size: 0.9rem;
+    color: var(--ink);
+    line-height: 1.6;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 2rem 2.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  footer p {
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+
+  .footer-links {
+    display: flex; gap: 1.25rem;
+  }
+
+  .footer-links a {
+    font-size: 0.8rem;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--ink); }
+
+  /* ── FADE IN ── */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 700px) {
+    nav { padding: 1rem 1.25rem; }
+    .nav-links { gap: 1rem; }
+    .hero { padding: 7rem 1.25rem 3rem; }
+    section { padding: 3rem 1.25rem; }
+    .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .projects-grid { grid-template-columns: 1fr; }
+    .tl-event { grid-template-columns: 1fr; gap: 0.25rem; }
+    footer { padding: 1.5rem 1.25rem; flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">Pooja Bassin</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#activity">Activity</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero fade-in">
+  <p class="hero-tag">Doctoral Researcher · Data Science · IIIT Bangalore</p>
+  <h1>Pooja<br /><em>Bassin</em></h1>
+  <p class="hero-desc">
+    Working at the intersection of intervention modeling, policy analytics, and sustainable development — building prescriptive, stability-aware systems that help policymakers translate data into action.
+  </p>
+  <div class="hero-links">
+    <a class="btn btn-primary" href="https://www.linkedin.com/in/poojabassin/" target="_blank">LinkedIn</a>
+    <a class="btn btn-ghost" href="https://scholar.google.com/citations?user=rVn5Ul8AAAAJ&hl=en" target="_blank">Google Scholar</a>
+    <a class="btn btn-ghost" href="https://www.researchgate.net/profile/Pooja-Bassin" target="_blank">ResearchGate</a>
+    <a class="btn btn-ghost" href="https://orcid.org/0000-0002-0611-8734" target="_blank">ORCID</a>
+    <a class="btn btn-ghost" href="https://lki-ssm.iiitb.ac.in/" target="_blank">Project Site</a>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ABOUT -->
+<section id="about" class="fade-in">
+  <p class="section-label">About</p>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>
+        I am a Doctoral Researcher in Data Science at the Web Science Lab, IIIT Bangalore, working at the intersection of intervention modeling, policy analytics, and sustainable development.
+      </p>
+      <p>
+        My research focuses on moving beyond descriptive dashboards towards prescriptive, stability-aware policy support systems that aid policymakers translate data into actionable, context-sensitive interventions.
+      </p>
+      <div class="status-box">
+        <div class="label">Status</div>
+        <p>PhD (Data Science) · Enrolled September 2020<br />
+        Thesis defended May 2026 · Award expected July 2026</p>
+      </div>
+    </div>
+    <div>
+      <p class="section-label" style="margin-bottom:1rem;">Research Interests</p>
+      <div class="interests-grid">
+        <span class="interest-tag">Intervention Science</span>
+        <span class="interest-tag">Prescriptive Analytics</span>
+        <span class="interest-tag">Policy Decision Support Systems</span>
+        <span class="interest-tag">Sustainability &amp; SDGs</span>
+        <span class="interest-tag">Applied AI for Public Systems</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PUBLICATIONS -->
+<section id="publications" class="fade-in">
+  <p class="section-label">Publications</p>
+  <div class="pub-list">
+
+    <div class="pub-item">
+      <span class="pub-num">01</span>
+      <div class="pub-content">
+        <div class="pub-title">
+          <a href="https://doi.org/10.1145/3776741" target="_blank">Towards an Intervention Science for Sustainable Development</a>
+          <span class="pub-badge">2026</span>
+        </div>
+        <div class="pub-meta">
+          Bassin, P., Malavalli, A., Srinivasa, S., &amp; Raj, M. ·
+          <span class="pub-venue">ACM Journal on Computing and Sustainable Societies</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-item">
+      <span class="pub-num">02</span>
+      <div class="pub-content">
+        <div class="pub-title">
+          <a href="https://arxiv.org/abs/2506.16836" target="_blank">Engineering Resilience: An Energy-Based Approach to Sustainable Behavioural Interventions</a>
+          <span class="pub-badge">2025</span>
+        </div>
+        <div class="pub-meta">
+          Malavalli, A. S., Sama, K., Chhabra, J., Bassin, P., &amp; Srinivasa, S. ·
+          <span class="pub-venue">arXiv preprint</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-item">
+      <span class="pub-num">03</span>
+      <div class="pub-content">
+        <div class="pub-title">
+          <a href="https://link.springer.com/chapter/10.1007/978-3-032-02225-7_12" target="_blank">From Dashboards to Do-Boards: A Data-Driven Architecture for Policy Support Systems</a>
+          <span class="pub-badge">2025</span>
+        </div>
+        <div class="pub-meta">
+          Kulkarni, A., Bassin, P., &amp; Srinivasa, S. ·
+          <span class="pub-venue">International Conference on Electronic Government (EGOVIS), Springer</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-item">
+      <span class="pub-num">04</span>
+      <div class="pub-content">
+        <div class="pub-title">
+          <a href="https://www.ijcai.org/proceedings/2024/0990.pdf" target="_blank">Design of a Data-Driven Intervention Dashboard for SDG Localization</a>
+          <span class="pub-badge">2024</span>
+        </div>
+        <div class="pub-meta">
+          Bassin, P., K, A. G., &amp; Srinivasa, S. ·
+          <span class="pub-venue">IJCAI 2024, Jeju Island</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-item">
+      <span class="pub-num">05</span>
+      <div class="pub-content">
+        <div class="pub-title">
+          <a href="https://www.techrxiv.org/users/797254/articles/1225077-representation-and-intervention-constructs-for-sdg-localisation" target="_blank">Representation and Intervention Constructs for SDG Localisation</a>
+          <span class="pub-badge">2024</span>
+        </div>
+        <div class="pub-meta">
+          Bassin, P., Srinivasa, S., &amp; Raj, M. ·
+          <span class="pub-venue">Authorea Preprints</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-item">
+      <span class="pub-num">06</span>
+      <div class="pub-content">
+        <div class="pub-title">
+          <a href="https://www.researchgate.net/publication/373088433_Modeling_the_Impact_of_Policy_Interventions_for_Sustainable_Development" target="_blank">Modeling the Impact of Policy Interventions for Sustainable Development</a>
+          <span class="pub-badge">2023</span>
+        </div>
+        <div class="pub-meta">
+          Rachuri, S. N., Malavalli, A., Parasa, N. S., Bassin, P., &amp; Srinivasa, S. ·
+          <span class="pub-venue">IJCAI 2023, Macao</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-item">
+      <span class="pub-num">07</span>
+      <div class="pub-content">
+        <div class="pub-title">Ontology Augmented Data Lake System for Policy Support
+          <span class="pub-badge">2022</span>
+        </div>
+        <div class="pub-meta">
+          Kulkarni, A., Bassin, P., et al. ·
+          <span class="pub-venue">International Conference on Big Data Analytics, Springer</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-item">
+      <span class="pub-num">08</span>
+      <div class="pub-content">
+        <div class="pub-title">
+          <a href="http://ceur-ws.org/Vol-3211/CR_098.pdf" target="_blank">Network Learning on Open Data to Aid Policy Making</a>
+          <span class="pub-badge">2022</span>
+        </div>
+        <div class="pub-meta">
+          Bassin, P. · <span class="pub-venue">ER Forum / PhD Symposium 2022</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-item">
+      <span class="pub-num">09</span>
+      <div class="pub-content">
+        <div class="pub-title">A Data-Driven Approach for Supporting Policy Intervention in Sustainable Development
+          <span class="pub-badge">2022</span>
+        </div>
+        <div class="pub-meta">
+          Bassin, P., Srinivasa, S., Mandyam, S. ·
+          <span class="pub-venue">ICSD 2022</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-item">
+      <span class="pub-num">10</span>
+      <div class="pub-content">
+        <div class="pub-title">Big Data Management for Policy Support in Sustainable Development
+          <span class="pub-badge">2021</span>
+        </div>
+        <div class="pub-meta">
+          Bassin, P., Parasa, N. S., Srinivasa, S., &amp; Mandyam, S. ·
+          <span class="pub-venue">International Conference on Big Data Analytics, Springer</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-item">
+      <span class="pub-num">11</span>
+      <div class="pub-content">
+        <div class="pub-title">An Interactive Simulator for COVID-19 Trend Analysis
+          <span class="pub-badge">2021</span>
+        </div>
+        <div class="pub-meta">
+          Deshmukh, J., Subbanarasimha, R. P., Bassin, P., et al. ·
+          <span class="pub-venue">ACM CODS-COMAD 2021</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PROJECTS -->
+<section id="projects" class="fade-in">
+  <p class="section-label">Projects</p>
+  <div class="projects-grid">
+    <div class="project-card">
+      <h3>NITI for States (NFS)</h3>
+      <p>Integrated platform under NITI Aayog's State Support Mission to foster learning, sharing, and action toward Viksit Bharat. Policy data and intervention analytics at state level.</p>
+      <a href="https://wsl.iiitb.ac.in/niti-for-states/" target="_blank">View project →</a>
+    </div>
+    <div class="project-card">
+      <h3>Karnataka Data Lake</h3>
+      <p>A policy support system backed by an ontology-augmented data lake, built in partnership with the Directorate of Economics and Statistics, Government of Karnataka.</p>
+      <a href="https://wsl.iiitb.ac.in/policy-support-system/" target="_blank">View project →</a>
+    </div>
+    <div class="project-card">
+      <h3>Covid-19 Dashboard</h3>
+      <p>An interactive simulator for COVID-19 trend analysis, supporting real-time policy decision-making through data visualization and epidemiological modeling.</p>
+    </div>
+    <div class="project-card">
+      <h3>Cogno Web Observatory</h3>
+      <p>A web observatory platform for cognitive and behavioral analytics, presented at Bangalore Tech Summit 2019.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ACTIVITY LOG -->
+<section id="activity" class="fade-in">
+  <p class="section-label">Research Activity</p>
+
+  <div class="timeline">
+
+    <div class="tl-year">2026</div>
+
+    <div class="tl-event">
+      <span class="tl-date">8 May 2026</span>
+      <span class="tl-text">Successfully defended PhD thesis: <em>"Representation and Intervention Modeling for Sustainable Development Goals"</em></span>
+    </div>
+    <div class="tl-event">
+      <span class="tl-date">22 Jan 2026</span>
+      <span class="tl-text">Hosted Shri Shoyabahmed Kalal, Director, State Support Mission at NITI Aayog, at the LKI centre for progress review.</span>
+    </div>
+
+    <div class="tl-year">2025</div>
+
+    <div class="tl-event">
+      <span class="tl-date">18 Aug 2025</span>
+      <span class="tl-text">Joined Sattva Consulting as Lead Researcher for the NITI Aayog project (IIITB-LKI / NFS initiative).</span>
+    </div>
+    <div class="tl-event">
+      <span class="tl-date">15 Aug 2025</span>
+      <span class="tl-text">Submitted PhD thesis.</span>
+    </div>
+    <div class="tl-event">
+      <span class="tl-date">8 Jul 2025</span>
+      <span class="tl-text">Presented Open Seminar for PhD thesis.</span>
+    </div>
+    <div class="tl-event">
+      <span class="tl-date">27 Feb 2025</span>
+      <span class="tl-text">WSL hosted Dame Wendy Hall and Prof. Noshir Contractor from the Web Science Trust.</span>
+    </div>
+
+    <div class="tl-year">2024</div>
+
+    <div class="tl-event">
+      <span class="tl-date">3–9 Aug 2024</span>
+      <span class="tl-text">Presented paper at IJCAI 2024, Jeju Island, South Korea.</span>
+    </div>
+    <div class="tl-event">
+      <span class="tl-date">16 May 2024</span>
+      <span class="tl-text">Presented Karnataka Data Lake work at Vidhana Soudha, Bengaluru, to the Directorate on Economics and Statistics.</span>
+    </div>
+
+    <div class="tl-year">2023</div>
+
+    <div class="tl-event">
+      <span class="tl-date">8–9 Dec 2023</span>
+      <span class="tl-text">Presented at AIESG 2023 at IIM Bangalore.</span>
+    </div>
+    <div class="tl-event">
+      <span class="tl-date">12 Apr 2023</span>
+      <span class="tl-text">Successfully presented PhD thesis proposal: <em>"Representation and Intervention Modelling for Sustainable Development Goals"</em></span>
+    </div>
+
+    <div class="tl-year">2022</div>
+
+    <div class="tl-event">
+      <span class="tl-date">28 Jul 2022</span>
+      <span class="tl-text">Successfully completed Comprehensive Exam, qualifying as a PhD candidate.</span>
+    </div>
+    <div class="tl-event">
+      <span class="tl-date">17 Oct 2022</span>
+      <span class="tl-text">Presented at ER 2022 Doctoral Symposium (Virtual): <em>"Network Learning on Open Data to Aid Policy Making"</em></span>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Pooja Bassin · Web Science Lab, IIIT Bangalore</p>
+  <div class="footer-links">
+    <a href="https://www.linkedin.com/in/poojabassin/" target="_blank">LinkedIn</a>
+    <a href="https://scholar.google.com/citations?user=rVn5Ul8AAAAJ&hl=en" target="_blank">Scholar</a>
+    <a href="https://orcid.org/0000-0002-0611-8734" target="_blank">ORCID</a>
+    <a href="https://wsl.iiitb.ac.in/" target="_blank">WSL</a>
+  </div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
