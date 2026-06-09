@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Activity — Pooja Bassin</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root { --ink:#1a1a18; --accent:#c85a2a; --muted:#7a7670; --rule:#d8d3c8; --max:1100px; --gutter:clamp(1.5rem,5vw,4rem); }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'DM Sans',sans-serif;background:linear-gradient(180deg,#f5f0e8 0%,#eeeae0 30%,#e6eaf0 70%,#dce4ee 100%);background-attachment:fixed;color:var(--ink);font-size:clamp(15px,1.1vw,17px);line-height:1.75;min-height:100vh;}
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0.9rem var(--gutter);background:rgba(245,240,232,0.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--rule);}
+  .nav-logo{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:1.45rem;color:var(--ink);text-decoration:none;letter-spacing:0.12em;white-space:nowrap;}
+  .nav-links{display:flex;gap:2rem;list-style:none;flex-wrap:wrap;}
+  .nav-links a{font-size:0.74rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.2s;white-space:nowrap;}
+  .nav-links a:hover{color:var(--ink);} .nav-links a.active{color:var(--accent);}
+  .page-wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter);}
+  .page-header{padding:calc(58px + 3.5rem) 0 2.5rem;}
+  .page-header h1{font-family:'DM Serif Display',serif;font-size:clamp(2.2rem,5vw,3.8rem);line-height:1.1;color:var(--accent);margin-bottom:0.5rem;}
+  .page-header .sub{font-size:0.85rem;color:var(--muted);font-family:'DM Mono',monospace;letter-spacing:0.06em;}
+  .section-label{font-family:'DM Mono',monospace;font-size:0.7rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-bottom:2.25rem;display:flex;align-items:center;gap:1rem;}
+  .section-label::after{content:'';flex:1;height:1px;background:var(--rule);}
+  section{padding:clamp(2rem,4vw,3.5rem) 0;}
+  /* Timeline */
+  .tl-year{font-family:'DM Serif Display',serif;font-size:1.55rem;color:var(--accent);margin:2.25rem 0 0.9rem;}
+  .tl-year:first-child{margin-top:0;}
+  .tl-event{display:grid;grid-template-columns:9rem 1fr;gap:2rem;padding:0.95rem 0;border-top:1px solid var(--rule);}
+  .tl-date{font-family:'DM Mono',monospace;font-size:0.76rem;color:var(--muted);padding-top:0.15rem;line-height:1.5;}
+  .tl-text{font-size:0.95rem;color:var(--ink);line-height:1.7;}
+  .tl-img{margin-top:0.85rem;max-width:460px;}
+  .tl-img img{width:100%;height:auto;display:block;border:1px solid var(--rule);border-radius:4px;box-shadow:0 2px 12px rgba(0,0,0,0.07);}
+  footer{border-top:1px solid var(--rule);padding:2.25rem 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;margin-top:3rem;}
+  footer p{font-size:0.8rem;color:var(--muted);}
+  .footer-links{display:flex;gap:1.5rem;}
+  .footer-links a{font-size:0.8rem;color:var(--muted);text-decoration:none;transition:color 0.2s;}
+  .footer-links a:hover{color:var(--ink);}
+  .fade-in{opacity:0;transform:translateY(18px);transition:opacity 0.6s ease,transform 0.6s ease;}
+  .fade-in.visible{opacity:1;transform:none;}
+  @media(max-width:600px){.nav-links{gap:1rem;}.nav-links a{font-size:0.68rem;}.tl-event{grid-template-columns:1fr;gap:0.2rem;}footer{flex-direction:column;align-items:flex-start;}}
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html">Pooja Bassin</a>
+  <ul class="nav-links">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#publications">Publications</a></li>
+    <li><a href="index.html#projects">Projects</a></li>
+    <li><a href="education.html">Education</a></li>
+    <li><a href="memberships.html">Memberships</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="activity.html" class="active">Activity</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="hobbies.html">Hobbies</a></li>
+  </ul>
+</nav>
+<div class="page-wrap">
+  <header class="page-header fade-in">
+    <h1>Research Activity</h1>
+    <p class="sub">Conferences, talks, visits &amp; milestones</p>
+  </header>
+  <section class="fade-in">
+    <p class="section-label">Timeline</p>
+    <div class="timeline">
+<div class="tl-year">2026</div>
+    <div class="tl-event">
+      <span class="tl-date">8 May 2026</span>
+      <div class="tl-text">Successfully defended PhD thesis: <em>"Representation and Intervention Modeling for Sustainable Development Goals"</em>
+        <div class="tl-img"><img src="images/defence.jpeg" alt="PhD thesis defense, May 2026" /></div>
+      </div>
+    </div>
+    <div class="tl-event">
+      <span class="tl-date">22 Jan 2026</span>
+      <div class="tl-text">Hosted Shri Shoyabahmed Kalal, Director, State Support Mission at NITI Aayog, at the LKI centre for progress review.
+        <div class="tl-img"><img src="images/shoaibvisit26.jpeg" alt="NITI Aayog visit, January 2026" /></div>
+      </div>
+    </div>
+
+    <div class="tl-year">2025</div>
+    <div class="tl-event">
+      <span class="tl-date">4 Sep 2025</span>
+      <span class="tl-text">Arpitha Srivathsa Malavalli presented <em>"Engineering Resilience: An Energy-Based Approach to Sustainable Behavioural Interventions"</em> at EUMAS 2025, online.</span>
+    </div>
+    <div class="tl-event">
+      <span class="tl-date">25–27 Aug 2025</span>
+      <span class="tl-text">Dr. Apurva Kulkarni presented <em>"From Dashboards to Do-Boards"</em> at EGOVIS 2025, Bangkok, Thailand.</span>
+    </div>
+    <div class="tl-event">
+      <span class="tl-date">18 Aug 2025</span>
+      <span class="tl-text">Joined Sattva Consulting as Lead Researcher for the NITI Aayog project (IIITB-LKI / NFS initiative).</span>
+    </div>
+    <div class="tl-event">
+      <span class="tl-date">15 Aug 2025</span>
+      <span class="tl-text">Submitted PhD thesis.</span>
+    </div>
+    <div class="tl-event">
+      <span class="tl-date">8 Jul 2025</span>
+      <span class="tl-text">Presented Open Seminar for PhD thesis titled <em>"Representation and Intervention Modeling for Sustainable Development Goals"</em>.</span>
+    </div>
+    <div class="tl-event">
+      <span class="tl-date">27 Feb 2025</span>
+      <span class="tl-text">WSL hosted Dame Wendy Hall and Prof. Noshir Contractor from the Web Science Trust, who interacted with research scholars.</span>
+    </div>
+    <div class="tl-event">
+      <span class="tl-date">15 Feb 2025</span>
+      <span class="tl-text">WSL hosted a delegation from the NITI for States team — an integrated platform by NITI Aayog to foster learning, sharing, and action towards a Viksit Bharat.</span>
+    </div>
+    <div class="tl-event">
+      <span class="tl-date">27 Nov 2025</span>
+      <div class="tl-text">Prof. Ricardo Baeza-Yates from KTH Royal Institute of Technology visited IIITB and interacted with WSL research scholars.
+        <div class="tl-img"><img src="images/ricardovisit26.jpg" alt="Prof. Ricardo Baeza-Yates visit" /></div>
+      </div>
+    </div>
+    <div class="tl-event">
+      <span class="tl-date">24 Nov 2025</span>
+      <div class="tl-text">Presented Samvaad Talk on <em>"Representation and Intervention Modeling for Sustainable Development Goals"</em>.
+        <div class="tl-img"><img src="images/samvaadtalk25.jpeg" alt="Samvaad Talk, November 2025" /></div>
+      </div>
+    </div>
+    <div class="tl-event">
+      <span class="tl-date">11 Oct 2025</span>
+      <div class="tl-text">Shri Shoyabahmed Kalal visited the LKI centre to review its progress.
+        <div class="tl-img"><img src="images/shoyebvisit25.jpeg" alt="NITI Aayog visit, October 2025" /></div>
+      </div>
+    </div>
+
+    <div class="tl-year">2024</div>
+    <div class="tl-event">
+      <span class="tl-date">17 Nov 2024</span>
+      <span class="tl-text">Attended <em>"Navigating India's Climate Future"</em> at Bangalore International Centre, organised by Azim Premji University.</span>
+    </div>
+    <div class="tl-event">
+      <span class="tl-date">3–9 Aug 2024</span>
+      <span class="tl-text">Presented <em>"Design of a Data-Driven Intervention Dashboard for SDG Localization"</em> at IJCAI 2024, Jeju Island, South Korea.</span>
+    </div>
+    <div class="tl-event">
+      <span class="tl-date">10 Jun 2024</span>
+      <span class="tl-text">Workshop on Web Science for Development (WS4D) conducted at IIITB. Theme: Digital Public Infrastructures.</span>
+    </div>
+    <div class="tl-event">
+      <span class="tl-date">16 May 2024</span>
+      <span class="tl-text">Presented Karnataka Data Lake pilot work at Vidhana Soudha, Bengaluru, to the Directorate on Economics and Statistics.</span>
+    </div>
+    <div class="tl-event">
+      <span class="tl-date">23 &amp; 29 Mar 2024</span>
+      <span class="tl-text">Posters on Consent Management, Gramma-Kannada, Scenario Search, and WS4D presented at the RISE Open House and Research Colloquium.</span>
+    </div>
+    <div class="tl-event">
+      <span class="tl-date">14 Feb 2024</span>
+      <span class="tl-text">Vision group meeting on megaregional mobility around Bengaluru, jointly by WSL and BeST at IIIT-Bangalore.</span>
+    </div>
+
+    <div class="tl-year">2023</div>
+    <div class="tl-event">
+      <span class="tl-date">8–9 Dec 2023</span>
+      <span class="tl-text">Presented at AIESG 2023, IIM Bangalore: <em>"Representation and Intervention Constructs for SDG Localisation"</em>.</span>
+    </div>
+    <div class="tl-event">
+      <span class="tl-date">19 Sep 2023</span>
+      <span class="tl-text">Presented poster <em>"Addressing Modelling Challenges for SDG Localisation"</em> at ICSD 2023 (online).</span>
+    </div>
+    <div class="tl-event">
+      <span class="tl-date">25 Aug 2023</span>
+      <span class="tl-text">Poster and demonstration of <em>"Modelling the Impact of Policy Interventions for Sustainable Development"</em> at IJCAI 2023, Macao.</span>
+    </div>
+    <div class="tl-event">
+      <span class="tl-date">12 Apr 2023</span>
+      <span class="tl-text">Successfully presented PhD thesis proposal: <em>"Representation and Intervention Modelling for Sustainable Development Goals"</em>.</span>
+    </div>
+    <div class="tl-event">
+      <span class="tl-date">18 Mar 2023</span>
+      <span class="tl-text">Presented <em>"Intervention Modelling for Sustainable Development"</em> at the Research Scholars Colloquium, WS4D 2023.</span>
+    </div>
+    <div class="tl-event">
+      <span class="tl-date">24 Feb 2023</span>
+      <span class="tl-text">Presented Karnataka Data Lake work at RISE 2023 under "Decisions with Data".</span>
+    </div>
+    <div class="tl-event">
+      <span class="tl-date">5 Jan 2023</span>
+      <span class="tl-text">Visited MS Building to meet government nodal officers and gather feedback for the Karnataka Data Lake project.</span>
+    </div>
+
+    <div class="tl-year">2022</div>
+    <div class="tl-event">
+      <span class="tl-date">5 Nov 2022</span>
+      <span class="tl-text">Presented Karnataka Data Lake work to CS Shalini Rajneesh at MS Building.</span>
+    </div>
+    <div class="tl-event">
+      <span class="tl-date">17 Oct 2022</span>
+      <span class="tl-text">Presented <em>"Network Learning on Open Data to Aid Policy Making"</em> at ER 2022 Doctoral Symposium (Virtual).</span>
+    </div>
+    <div class="tl-event">
+      <span class="tl-date">19 Sep 2022</span>
+      <span class="tl-text">Presented <em>"A Data-Driven Approach for Supporting Policy Intervention in Sustainable Development"</em> at ICSD 2022 (online).</span>
+    </div>
+    <div class="tl-event">
+      <span class="tl-date">24 Aug 2022</span>
+      <span class="tl-text">Visited MS Building to meet government and UNDP officials for the Karnataka Data Lake project.</span>
+    </div>
+    <div class="tl-event">
+      <span class="tl-date">10–11 Aug 2022</span>
+      <span class="tl-text">Visited MS Building to meet government officials for the Karnataka Data Lake project.</span>
+    </div>
+    <div class="tl-event">
+      <span class="tl-date">28 Jul 2022</span>
+      <span class="tl-text">Successfully completed the Comprehensive Exam, qualifying as a PhD candidate.</span>
+    </div>
+
+    <div class="tl-year">2021</div>
+    <div class="tl-event">
+      <span class="tl-date">7 Dec 2021</span>
+      <span class="tl-text">Prof. Srinath Srinivasa presented <em>"Big Data Management for Policy Support in Sustainable Development"</em> at BASE 2021, Aizu, Japan.</span>
+    </div>
+    <div class="tl-event">
+      <span class="tl-date">21 Jun 2021</span>
+      <span class="tl-text">Workshop on Web Science for Digital Capabilities (WSDC 2021) co-located with the 13th ACM Web Science Conference, held online.</span>
+    </div>
+
+    <div class="tl-year">2020</div>
+    <div class="tl-event">
+      <span class="tl-date">Sep 2020</span>
+      <span class="tl-text">Enrolled as PhD student in Data Science at IIIT Bangalore.</span>
+    </div>
+    <div class="tl-event">
+      <span class="tl-date">12–14 Feb 2020</span>
+      <span class="tl-text">WSL conducted the Second Workshop on Web Science for Development (WS4D 2020), spanning 3 days.</span>
+    </div>
+
+    <div class="tl-year">2019</div>
+    <div class="tl-event">
+      <span class="tl-date">18–20 Nov 2019</span>
+      <span class="tl-text">Presented Cogno Web Observatory at Bangalore Tech Summit 2019 alongside Prof. Srinath Srinivasa, Raksha P S, and Jayati Deshmukh.</span>
+    </div>    </div>
+  </section>
+  <footer>
+    <p>© 2026 Pooja Bassin · Web Science Lab, IIIT Bangalore</p>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/poojabassin/" target="_blank">LinkedIn</a>
+      <a href="https://scholar.google.com/citations?user=rVn5Ul8AAAAJ&hl=en" target="_blank">Scholar</a>
+      <a href="https://orcid.org/0000-0002-0611-8734" target="_blank">ORCID</a>
+      <a href="https://dl.acm.org/profile/99659665978/publications" target="_blank">ACM</a>
+      <a href="https://wsl.iiitb.ac.in/" target="_blank">WSL</a>
+    </div>
+  </footer>
+</div>
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }});
+  }, { threshold: 0.05 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

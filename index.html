@@ -249,6 +249,12 @@
   }
 
   /* ── PUBLICATIONS ── */
+  .pub-category {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--accent); margin: 2rem 0 0.75rem;
+  }
+  .pub-list + .pub-category { margin-top: 2.5rem; }
   .pub-list { display: flex; flex-direction: column; }
   .pub-item {
     display: grid; grid-template-columns: 3rem 1fr;
@@ -384,7 +390,7 @@
     <li><a href="education.html">Education</a></li>
     <li><a href="memberships.html">Memberships</a></li>
     <li><a href="experience.html">Experience</a></li>
-    <li><a href="#activity">Activity</a></li>
+    <li><a href="activity.html">Activity</a></li>
     <li><a href="contact.html">Contact</a></li>
     <li><a href="hobbies.html">Hobbies</a></li>
   </ul>
@@ -488,85 +494,111 @@
 <!-- PUBLICATIONS -->
 <section id="publications" class="fade-in">
   <p class="section-label">Publications</p>
+
+  <!-- Journal Articles -->
+  <p class="pub-category">Journal Articles</p>
   <div class="pub-list">
     <div class="pub-item">
-      <span class="pub-num">01</span>
+      <span class="pub-num">J1</span>
       <div>
         <div class="pub-title"><a href="https://doi.org/10.1145/3776741" target="_blank">Towards an Intervention Science for Sustainable Development</a><span class="pub-badge">2026</span></div>
         <div class="pub-meta">Bassin, P., Malavalli, A., Srinivasa, S., &amp; Raj, M. · <span class="pub-venue">ACM Journal on Computing and Sustainable Societies, Vol. 4, Issue 1</span></div>
       </div>
     </div>
+  </div>
+
+  <!-- Conference Papers -->
+  <p class="pub-category">Conference Papers</p>
+  <div class="pub-list">
     <div class="pub-item">
-      <span class="pub-num">02</span>
-      <div>
-        <div class="pub-title"><a href="https://arxiv.org/abs/2506.16836" target="_blank">Engineering Resilience: An Energy-Based Approach to Sustainable Behavioural Interventions</a><span class="pub-badge">2025</span></div>
-        <div class="pub-meta">Malavalli, A. S., Sama, K., Chhabra, J., Bassin, P., &amp; Srinivasa, S. · <span class="pub-venue">arXiv preprint · 10.48550/arXiv.2506.16836</span></div>
-      </div>
-    </div>
-    <div class="pub-item">
-      <span class="pub-num">03</span>
+      <span class="pub-num">C1</span>
       <div>
         <div class="pub-title"><a href="https://link.springer.com/chapter/10.1007/978-3-032-02225-7_12" target="_blank">From Dashboards to Do-Boards: A Data-Driven Architecture for Policy Support Systems</a><span class="pub-badge">2025</span></div>
         <div class="pub-meta">Kulkarni, A., Bassin, P., &amp; Srinivasa, S. · <span class="pub-venue">EGOVIS 2025, LNCS vol 16049, pp. 175–189, Springer</span></div>
       </div>
     </div>
     <div class="pub-item">
-      <span class="pub-num">04</span>
+      <span class="pub-num">C2</span>
       <div>
         <div class="pub-title"><a href="https://www.ijcai.org/proceedings/2024/0990.pdf" target="_blank">Design of a Data-Driven Intervention Dashboard for SDG Localization</a><span class="pub-badge">2024</span></div>
         <div class="pub-meta">Bassin, P., Abraham GK, &amp; Srinivasa, S. · <span class="pub-venue">IJCAI 2024, Jeju Island, pp. 8606–8609</span></div>
       </div>
     </div>
     <div class="pub-item">
-      <span class="pub-num">05</span>
-      <div>
-        <div class="pub-title"><a href="https://www.techrxiv.org/users/797254/articles/1225077-representation-and-intervention-constructs-for-sdg-localisation" target="_blank">Representation and Intervention Constructs for SDG Localisation</a><span class="pub-badge">2024</span></div>
-        <div class="pub-meta">Bassin, P., Srinivasa, S., &amp; Raj, M. · <span class="pub-venue">TechRxiv Preprint · DOI: 10.36227/techrxiv.172668653.36238193/v1</span></div>
-      </div>
-    </div>
-    <div class="pub-item">
-      <span class="pub-num">06</span>
+      <span class="pub-num">C3</span>
       <div>
         <div class="pub-title"><a href="https://www.researchgate.net/publication/373088433_Modeling_the_Impact_of_Policy_Interventions_for_Sustainable_Development" target="_blank">Modeling the Impact of Policy Interventions for Sustainable Development</a><span class="pub-badge">2023</span></div>
         <div class="pub-meta">Rachuri, S. N., Malavalli, A., Parasa, N. S., Bassin, P., &amp; Srinivasa, S. · <span class="pub-venue">IJCAI 2023, Macao, pp. 7167–7170</span></div>
       </div>
     </div>
     <div class="pub-item">
-      <span class="pub-num">07</span>
+      <span class="pub-num">C4</span>
       <div>
         <div class="pub-title">Ontology Augmented Data Lake System for Policy Support<span class="pub-badge">2022</span></div>
         <div class="pub-meta">Kulkarni, A., Bassin, P., Parasa, N. S., Srinivasa, S., Vinu EV, &amp; Ramanathan, C. · <span class="pub-venue">BDA 2022, LNCS vol 13830, pp. 3–16, Springer</span></div>
       </div>
     </div>
     <div class="pub-item">
-      <span class="pub-num">08</span>
+      <span class="pub-num">C5</span>
       <div>
         <div class="pub-title"><a href="http://ceur-ws.org/Vol-3211/CR_098.pdf" target="_blank">Network Learning on Open Data to Aid Policy Making</a><span class="pub-badge">2022</span></div>
         <div class="pub-meta">Bassin, P. · <span class="pub-venue">ER Forum &amp; PhD Symposium 2022, CEUR-WS.org</span></div>
       </div>
     </div>
     <div class="pub-item">
-      <span class="pub-num">09</span>
+      <span class="pub-num">C6</span>
       <div>
         <div class="pub-title">A Data-Driven Approach for Supporting Policy Intervention in Sustainable Development<span class="pub-badge">2022</span></div>
         <div class="pub-meta">Bassin, P., Srinivasa, S., &amp; Mandyam, S. · <span class="pub-venue">ICSD 2022, Track: Collaboration Models for the SDGs</span></div>
       </div>
     </div>
     <div class="pub-item">
-      <span class="pub-num">10</span>
+      <span class="pub-num">C7</span>
       <div>
         <div class="pub-title">Big Data Management for Policy Support in Sustainable Development<span class="pub-badge">2021</span></div>
         <div class="pub-meta">Bassin, P., Parasa, N. S., Srinivasa, S., &amp; Mandyam, S. · <span class="pub-venue">BDA 2021, LNCS vol 13167, Springer</span></div>
       </div>
     </div>
     <div class="pub-item">
-      <span class="pub-num">11</span>
+      <span class="pub-num">C8</span>
       <div>
         <div class="pub-title">An Interactive Simulator for COVID-19 Trend Analysis<span class="pub-badge">2021</span></div>
         <div class="pub-meta">Deshmukh, J., Subbanarasimha, R. P., Bassin, P., et al. · <span class="pub-venue">ACM CODS-COMAD 2021, pp. 385–389</span></div>
       </div>
     </div>
   </div>
+
+  <!-- Preprints -->
+  <p class="pub-category">Preprints</p>
+  <div class="pub-list">
+    <div class="pub-item">
+      <span class="pub-num">P1</span>
+      <div>
+        <div class="pub-title"><a href="https://arxiv.org/abs/2506.16836" target="_blank">Engineering Resilience: An Energy-Based Approach to Sustainable Behavioural Interventions</a><span class="pub-badge">2025</span></div>
+        <div class="pub-meta">Malavalli, A. S., Sama, K., Chhabra, J., Bassin, P., &amp; Srinivasa, S. · <span class="pub-venue">arXiv · 10.48550/arXiv.2506.16836</span></div>
+      </div>
+    </div>
+    <div class="pub-item">
+      <span class="pub-num">P2</span>
+      <div>
+        <div class="pub-title"><a href="https://www.techrxiv.org/users/797254/articles/1225077-representation-and-intervention-constructs-for-sdg-localisation" target="_blank">Representation and Intervention Constructs for SDG Localisation</a><span class="pub-badge">2024</span></div>
+        <div class="pub-meta">Bassin, P., Srinivasa, S., &amp; Raj, M. · <span class="pub-venue">TechRxiv Preprint · DOI: 10.36227/techrxiv.172668653.36238193/v1</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Poster Presentations -->
+  <p class="pub-category">Poster Presentations</p>
+  <div class="pub-list">
+    <div class="pub-item">
+      <span class="pub-num">PP1</span>
+      <div>
+        <div class="pub-title">Addressing Modelling Challenges for SDG Localisation<span class="pub-badge">2023</span></div>
+        <div class="pub-meta">Bassin, P., Srinivasa, S., &amp; Raj, M. · <span class="pub-venue">International Conference on Sustainable Development (ICSD), September 18–20, 2023</span></div>
+      </div>
+    </div>
+  </div>
+
 </section>
 
 <div class="divider"></div>
@@ -601,244 +633,7 @@
   </div>
 </section>
 
-<div class="divider"></div>
 
-<!-- EDUCATION -->
-<section id="education" class="fade-in">
-  <p class="section-label">Education</p>
-  <div class="edu-list">
-    <div class="edu-item">
-      <div class="edu-date">Sep 2020 – Present</div>
-      <div>
-        <div class="edu-degree">PhD, Data Science <span class="edu-badge">CGPA 3.86/4.00</span></div>
-        <div class="edu-inst">International Institute of Information Technology Bangalore, India</div>
-        <div class="edu-detail">Thesis: "Representation and Intervention Modeling for Sustainable Development Goals" · Supervisor: Prof. Srinath Srinivasa · Defended May 2026</div>
-      </div>
-    </div>
-    <div class="edu-item">
-      <div class="edu-date">2012 – 2014</div>
-      <div>
-        <div class="edu-degree">M.Tech, Computer Science <span class="edu-badge">82.65% Distinction</span></div>
-        <div class="edu-inst">Banasthali Vidyapith, Jaipur, India</div>
-      </div>
-    </div>
-    <div class="edu-item">
-      <div class="edu-date">2008 – 2011</div>
-      <div>
-        <div class="edu-degree">MCA, Computer Applications <span class="edu-badge">74.47%</span></div>
-        <div class="edu-inst">Banasthali Vidyapith, Jaipur, India</div>
-      </div>
-    </div>
-    <div class="edu-item">
-      <div class="edu-date">2005 – 2008</div>
-      <div>
-        <div class="edu-degree">BCA, Computer Applications <span class="edu-badge">75.39%</span></div>
-        <div class="edu-inst">Banasthali Vidyapith, Jaipur, India</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- MEMBERSHIPS & CERTIFICATIONS -->
-<section id="memberships" class="fade-in">
-  <p class="section-label">Memberships &amp; Certifications</p>
-  <div class="memb-list">
-    <div class="memb-item">
-      <div class="memb-date">2025 – Present</div>
-      <div>
-        <div class="memb-title">Professional Member</div>
-        <div class="memb-org">Association for Computing Machinery (ACM)</div>
-      </div>
-    </div>
-    <div class="memb-item">
-      <div class="memb-date">Nov 2025</div>
-      <div>
-        <div class="memb-title">Applied Project Management</div>
-        <div class="memb-org">Coursera (Issued November 2025)</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- ACTIVITY LOG -->
-<section id="activity" class="fade-in">
-  <p class="section-label">Research Activity</p>
-  <div class="timeline">
-    <div class="tl-year">2026</div>
-    <div class="tl-event">
-      <span class="tl-date">8 May 2026</span>
-      <div class="tl-text">Successfully defended PhD thesis: <em>"Representation and Intervention Modeling for Sustainable Development Goals"</em>
-        <div class="tl-img"><img src="images/defence.jpeg" alt="PhD thesis defense, May 2026" /></div>
-      </div>
-    </div>
-    <div class="tl-event">
-      <span class="tl-date">22 Jan 2026</span>
-      <div class="tl-text">Hosted Shri Shoyabahmed Kalal, Director, State Support Mission at NITI Aayog, at the LKI centre for progress review.
-        <div class="tl-img"><img src="images/shoaibvisit26.jpeg" alt="NITI Aayog visit, January 2026" /></div>
-      </div>
-    </div>
-
-    <div class="tl-year">2025</div>
-    <div class="tl-event">
-      <span class="tl-date">4 Sep 2025</span>
-      <span class="tl-text">Arpitha Srivathsa Malavalli presented <em>"Engineering Resilience: An Energy-Based Approach to Sustainable Behavioural Interventions"</em> at EUMAS 2025, online.</span>
-    </div>
-    <div class="tl-event">
-      <span class="tl-date">25–27 Aug 2025</span>
-      <span class="tl-text">Dr. Apurva Kulkarni presented <em>"From Dashboards to Do-Boards"</em> at EGOVIS 2025, Bangkok, Thailand.</span>
-    </div>
-    <div class="tl-event">
-      <span class="tl-date">18 Aug 2025</span>
-      <span class="tl-text">Joined Sattva Consulting as Lead Researcher for the NITI Aayog project (IIITB-LKI / NFS initiative).</span>
-    </div>
-    <div class="tl-event">
-      <span class="tl-date">15 Aug 2025</span>
-      <span class="tl-text">Submitted PhD thesis.</span>
-    </div>
-    <div class="tl-event">
-      <span class="tl-date">8 Jul 2025</span>
-      <span class="tl-text">Presented Open Seminar for PhD thesis titled <em>"Representation and Intervention Modeling for Sustainable Development Goals"</em>.</span>
-    </div>
-    <div class="tl-event">
-      <span class="tl-date">27 Feb 2025</span>
-      <span class="tl-text">WSL hosted Dame Wendy Hall and Prof. Noshir Contractor from the Web Science Trust, who interacted with research scholars.</span>
-    </div>
-    <div class="tl-event">
-      <span class="tl-date">15 Feb 2025</span>
-      <span class="tl-text">WSL hosted a delegation from the NITI for States team — an integrated platform by NITI Aayog to foster learning, sharing, and action towards a Viksit Bharat.</span>
-    </div>
-    <div class="tl-event">
-      <span class="tl-date">27 Nov 2025</span>
-      <div class="tl-text">Prof. Ricardo Baeza-Yates from KTH Royal Institute of Technology visited IIITB and interacted with WSL research scholars.
-        <div class="tl-img"><img src="images/ricardovisit26.jpg" alt="Prof. Ricardo Baeza-Yates visit" /></div>
-      </div>
-    </div>
-    <div class="tl-event">
-      <span class="tl-date">24 Nov 2025</span>
-      <div class="tl-text">Presented Samvaad Talk on <em>"Representation and Intervention Modeling for Sustainable Development Goals"</em>.
-        <div class="tl-img"><img src="images/samvaadtalk25.jpeg" alt="Samvaad Talk, November 2025" /></div>
-      </div>
-    </div>
-    <div class="tl-event">
-      <span class="tl-date">11 Oct 2025</span>
-      <div class="tl-text">Shri Shoyabahmed Kalal visited the LKI centre to review its progress.
-        <div class="tl-img"><img src="images/shoyebvisit25.jpeg" alt="NITI Aayog visit, October 2025" /></div>
-      </div>
-    </div>
-
-    <div class="tl-year">2024</div>
-    <div class="tl-event">
-      <span class="tl-date">17 Nov 2024</span>
-      <span class="tl-text">Attended <em>"Navigating India's Climate Future"</em> at Bangalore International Centre, organised by Azim Premji University.</span>
-    </div>
-    <div class="tl-event">
-      <span class="tl-date">3–9 Aug 2024</span>
-      <span class="tl-text">Presented <em>"Design of a Data-Driven Intervention Dashboard for SDG Localization"</em> at IJCAI 2024, Jeju Island, South Korea.</span>
-    </div>
-    <div class="tl-event">
-      <span class="tl-date">10 Jun 2024</span>
-      <span class="tl-text">Workshop on Web Science for Development (WS4D) conducted at IIITB. Theme: Digital Public Infrastructures.</span>
-    </div>
-    <div class="tl-event">
-      <span class="tl-date">16 May 2024</span>
-      <span class="tl-text">Presented Karnataka Data Lake pilot work at Vidhana Soudha, Bengaluru, to the Directorate on Economics and Statistics.</span>
-    </div>
-    <div class="tl-event">
-      <span class="tl-date">23 &amp; 29 Mar 2024</span>
-      <span class="tl-text">Posters on Consent Management, Gramma-Kannada, Scenario Search, and WS4D presented at the RISE Open House and Research Colloquium.</span>
-    </div>
-    <div class="tl-event">
-      <span class="tl-date">14 Feb 2024</span>
-      <span class="tl-text">Vision group meeting on megaregional mobility around Bengaluru, jointly by WSL and BeST at IIIT-Bangalore.</span>
-    </div>
-
-    <div class="tl-year">2023</div>
-    <div class="tl-event">
-      <span class="tl-date">8–9 Dec 2023</span>
-      <span class="tl-text">Presented at AIESG 2023, IIM Bangalore: <em>"Representation and Intervention Constructs for SDG Localisation"</em>.</span>
-    </div>
-    <div class="tl-event">
-      <span class="tl-date">19 Sep 2023</span>
-      <span class="tl-text">Presented poster <em>"Addressing Modelling Challenges for SDG Localisation"</em> at ICSD 2023 (online).</span>
-    </div>
-    <div class="tl-event">
-      <span class="tl-date">25 Aug 2023</span>
-      <span class="tl-text">Poster and demonstration of <em>"Modelling the Impact of Policy Interventions for Sustainable Development"</em> at IJCAI 2023, Macao.</span>
-    </div>
-    <div class="tl-event">
-      <span class="tl-date">12 Apr 2023</span>
-      <span class="tl-text">Successfully presented PhD thesis proposal: <em>"Representation and Intervention Modelling for Sustainable Development Goals"</em>.</span>
-    </div>
-    <div class="tl-event">
-      <span class="tl-date">18 Mar 2023</span>
-      <span class="tl-text">Presented <em>"Intervention Modelling for Sustainable Development"</em> at the Research Scholars Colloquium, WS4D 2023.</span>
-    </div>
-    <div class="tl-event">
-      <span class="tl-date">24 Feb 2023</span>
-      <span class="tl-text">Presented Karnataka Data Lake work at RISE 2023 under "Decisions with Data".</span>
-    </div>
-    <div class="tl-event">
-      <span class="tl-date">5 Jan 2023</span>
-      <span class="tl-text">Visited MS Building to meet government nodal officers and gather feedback for the Karnataka Data Lake project.</span>
-    </div>
-
-    <div class="tl-year">2022</div>
-    <div class="tl-event">
-      <span class="tl-date">5 Nov 2022</span>
-      <span class="tl-text">Presented Karnataka Data Lake work to CS Shalini Rajneesh at MS Building.</span>
-    </div>
-    <div class="tl-event">
-      <span class="tl-date">17 Oct 2022</span>
-      <span class="tl-text">Presented <em>"Network Learning on Open Data to Aid Policy Making"</em> at ER 2022 Doctoral Symposium (Virtual).</span>
-    </div>
-    <div class="tl-event">
-      <span class="tl-date">19 Sep 2022</span>
-      <span class="tl-text">Presented <em>"A Data-Driven Approach for Supporting Policy Intervention in Sustainable Development"</em> at ICSD 2022 (online).</span>
-    </div>
-    <div class="tl-event">
-      <span class="tl-date">24 Aug 2022</span>
-      <span class="tl-text">Visited MS Building to meet government and UNDP officials for the Karnataka Data Lake project.</span>
-    </div>
-    <div class="tl-event">
-      <span class="tl-date">10–11 Aug 2022</span>
-      <span class="tl-text">Visited MS Building to meet government officials for the Karnataka Data Lake project.</span>
-    </div>
-    <div class="tl-event">
-      <span class="tl-date">28 Jul 2022</span>
-      <span class="tl-text">Successfully completed the Comprehensive Exam, qualifying as a PhD candidate.</span>
-    </div>
-
-    <div class="tl-year">2021</div>
-    <div class="tl-event">
-      <span class="tl-date">7 Dec 2021</span>
-      <span class="tl-text">Prof. Srinath Srinivasa presented <em>"Big Data Management for Policy Support in Sustainable Development"</em> at BASE 2021, Aizu, Japan.</span>
-    </div>
-    <div class="tl-event">
-      <span class="tl-date">21 Jun 2021</span>
-      <span class="tl-text">Workshop on Web Science for Digital Capabilities (WSDC 2021) co-located with the 13th ACM Web Science Conference, held online.</span>
-    </div>
-
-    <div class="tl-year">2020</div>
-    <div class="tl-event">
-      <span class="tl-date">Sep 2020</span>
-      <span class="tl-text">Enrolled as PhD student in Data Science at IIIT Bangalore.</span>
-    </div>
-    <div class="tl-event">
-      <span class="tl-date">12–14 Feb 2020</span>
-      <span class="tl-text">WSL conducted the Second Workshop on Web Science for Development (WS4D 2020), spanning 3 days.</span>
-    </div>
-
-    <div class="tl-year">2019</div>
-    <div class="tl-event">
-      <span class="tl-date">18–20 Nov 2019</span>
-      <span class="tl-text">Presented Cogno Web Observatory at Bangalore Tech Summit 2019 alongside Prof. Srinath Srinivasa, Raksha P S, and Jayati Deshmukh.</span>
-    </div>
-  </div>
-</section>
 
 <div class="divider"></div>
 
