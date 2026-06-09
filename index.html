@@ -3,6 +3,20 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Pooja Bassin — Doctoral Researcher in Data Science at IIIT Bangalore. Working at the intersection of intervention modeling, policy analytics, and sustainable development." />
+<meta name="keywords" content="Pooja Bassin, Data Science, SDG, intervention modeling, policy analytics, IIIT Bangalore, Web Science Lab" />
+<meta name="author" content="Pooja Bassin" />
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://pooja-b-r.github.io/" />
+<meta property="og:title" content="Pooja Bassin — Doctoral Researcher in Data Science" />
+<meta property="og:description" content="Working at the intersection of intervention modeling, policy analytics, and sustainable development. PhD from IIIT Bangalore." />
+<meta property="og:image" content="https://pooja-b-r.github.io/images/og-preview.jpg" />
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Pooja Bassin — Doctoral Researcher in Data Science" />
+<meta name="twitter:description" content="Intervention modeling, policy analytics, and sustainable development. PhD, IIIT Bangalore." />
+<meta name="twitter:image" content="https://pooja-b-r.github.io/images/og-preview.jpg" />
 <title>Pooja Bassin — Doctoral Researcher</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <style>
@@ -20,8 +34,6 @@
 
   body {
     font-family: 'DM Sans', sans-serif;
-    background: linear-gradient(180deg, #f5f0e8 0%, #eeeae0 30%, #e6eaf0 70%, #dce4ee 100%);
-    background-attachment: fixed;
     color: var(--ink);
     font-size: clamp(15px, 1.1vw, 17px);
     line-height: 1.75;
@@ -168,6 +180,50 @@
   .si-acm      { color: #0085CA; }
   .si-wsl      { color: var(--accent); }
   .si-cv       { color: #666; }
+
+
+  /* ── TOPO BACKGROUND ── */
+  body::before {
+    content: '';
+    position: fixed; inset: 0; z-index: -1;
+    background: linear-gradient(180deg, #f5f0e8 0%, #eeeae0 30%, #e6eaf0 70%, #dce4ee 100%);
+  }
+  body::after {
+    content: '';
+    position: fixed; inset: 0; z-index: -1;
+    opacity: 0.18;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='800'%3E%3Cdefs%3E%3Cstyle%3E.c%7Bfill:none;stroke:%23c85a2a;stroke-width:0.8;%7D%3C/style%3E%3C/defs%3E%3Cellipse class='c' cx='400' cy='400' rx='380' ry='160'/%3E%3Cellipse class='c' cx='400' cy='400' rx='340' ry='138'/%3E%3Cellipse class='c' cx='400' cy='400' rx='300' ry='116'/%3E%3Cellipse class='c' cx='400' cy='400' rx='260' ry='97'/%3E%3Cellipse class='c' cx='400' cy='400' rx='220' ry='80'/%3E%3Cellipse class='c' cx='400' cy='400' rx='180' ry='64'/%3E%3Cellipse class='c' cx='400' cy='400' rx='140' ry='50'/%3E%3Cellipse class='c' cx='400' cy='400' rx='100' ry='37'/%3E%3Cellipse class='c' cx='400' cy='400' rx='62' ry='25'/%3E%3Cellipse class='c' cx='400' cy='400' rx='28' ry='13'/%3E%3Cellipse class='c' cx='160' cy='200' rx='155' ry='68'/%3E%3Cellipse class='c' cx='160' cy='200' rx='125' ry='54'/%3E%3Cellipse class='c' cx='160' cy='200' rx='95' ry='40'/%3E%3Cellipse class='c' cx='160' cy='200' rx='65' ry='27'/%3E%3Cellipse class='c' cx='160' cy='200' rx='36' ry='16'/%3E%3Cellipse class='c' cx='650' cy='620' rx='145' ry='60'/%3E%3Cellipse class='c' cx='650' cy='620' rx='110' ry='46'/%3E%3Cellipse class='c' cx='650' cy='620' rx='75' ry='32'/%3E%3Cellipse class='c' cx='650' cy='620' rx='42' ry='19'/%3E%3Cellipse class='c' cx='700' cy='150' rx='90' ry='42'/%3E%3Cellipse class='c' cx='700' cy='150' rx='62' ry='29'/%3E%3Cellipse class='c' cx='700' cy='150' rx='35' ry='17'/%3E%3Cellipse class='c' cx='100' cy='650' rx='80' ry='35'/%3E%3Cellipse class='c' cx='100' cy='650' rx='52' ry='23'/%3E%3Cellipse class='c' cx='100' cy='650' rx='26' ry='12'/%3E%3C/svg%3E");
+    background-size: 800px 800px;
+    background-repeat: repeat;
+  }
+
+  /* ── STATS BAR ── */
+  .stats-bar {
+    display: flex; gap: 0; flex-wrap: wrap;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    background: rgba(255,255,255,0.38);
+    backdrop-filter: blur(8px);
+    overflow: hidden;
+    margin-bottom: 2.5rem;
+  }
+  .stat-item {
+    flex: 1; min-width: 120px;
+    padding: 1.1rem 1.4rem;
+    border-right: 1px solid var(--rule);
+    display: flex; flex-direction: column; gap: 0.2rem;
+  }
+  .stat-item:last-child { border-right: none; }
+  .stat-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.9rem; line-height: 1;
+    color: var(--accent);
+  }
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.66rem; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--muted);
+  }
 
   /* ── SINGLE DIVIDER — no doubles ── */
   .divider { width: 100%; height: 1px; background: var(--rule); }
@@ -393,6 +449,7 @@
     <li><a href="activity.html">Activity</a></li>
     <li><a href="contact.html">Contact</a></li>
     <li><a href="hobbies.html">Hobbies</a></li>
+    <li><a href="now.html">Now</a></li>
   </ul>
 </nav>
 
@@ -457,6 +514,15 @@
     </div>
   </div>
 </div><!-- /hero -->
+
+<!-- STATS BAR -->
+<div class="stats-bar fade-in">
+  <div class="stat-item"><div class="stat-num">11</div><div class="stat-label">Publications</div></div>
+  <div class="stat-item"><div class="stat-num">6+</div><div class="stat-label">Years Research</div></div>
+  <div class="stat-item"><div class="stat-num">3</div><div class="stat-label">Institutions</div></div>
+  <div class="stat-item"><div class="stat-num">4</div><div class="stat-label">Countries presented</div></div>
+  <div class="stat-item"><div class="stat-num">3.86</div><div class="stat-label">PhD CGPA / 4.00</div></div>
+</div>
 
 <div class="divider"></div>
 
