@@ -67,32 +67,57 @@
   .fade-in.visible{opacity:1;transform:none;}
   @media(max-width:600px){.nav-links{gap:1rem;}.nav-links a{font-size:0.68rem;}.hobby-grid{grid-template-columns:1fr;}footer{flex-direction:column;align-items:flex-start;}}
 
-  /* ── TOPO BACKGROUND ── */
-  body::before {
-    content: '';
-    position: fixed; inset: 0; z-index: -1;
-    background: linear-gradient(180deg, #f5f0e8 0%, #eeeae0 30%, #e6eaf0 70%, #dce4ee 100%);
+
+  /* ── ANIMATED MESH GRADIENT ── */
+  @keyframes meshMove1 { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(60px,-40px) scale(1.08)} }
+  @keyframes meshMove2 { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(-50px,55px) scale(1.06)} }
+  @keyframes meshMove3 { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(45px,40px) scale(1.1)} }
+  @keyframes meshMove4 { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(-60px,-35px) scale(1.05)} }
+  @keyframes meshMove5 { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(30px,60px) scale(1.07)} }
+
+  .mesh-bg {
+    position: fixed; inset: 0; z-index: -1; overflow: hidden;
+    background: #f0ece2;
   }
-  body::after {
-    content: '';
-    position: fixed; inset: 0; z-index: -1;
-    opacity: 0.18;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='800'%3E%3Cdefs%3E%3Cstyle%3E.c%7Bfill:none;stroke:%23c85a2a;stroke-width:0.8;%7D%3C/style%3E%3C/defs%3E%3Cellipse class='c' cx='400' cy='400' rx='380' ry='160'/%3E%3Cellipse class='c' cx='400' cy='400' rx='340' ry='138'/%3E%3Cellipse class='c' cx='400' cy='400' rx='300' ry='116'/%3E%3Cellipse class='c' cx='400' cy='400' rx='260' ry='97'/%3E%3Cellipse class='c' cx='400' cy='400' rx='220' ry='80'/%3E%3Cellipse class='c' cx='400' cy='400' rx='180' ry='64'/%3E%3Cellipse class='c' cx='400' cy='400' rx='140' ry='50'/%3E%3Cellipse class='c' cx='400' cy='400' rx='100' ry='37'/%3E%3Cellipse class='c' cx='400' cy='400' rx='62' ry='25'/%3E%3Cellipse class='c' cx='400' cy='400' rx='28' ry='13'/%3E%3Cellipse class='c' cx='160' cy='200' rx='155' ry='68'/%3E%3Cellipse class='c' cx='160' cy='200' rx='125' ry='54'/%3E%3Cellipse class='c' cx='160' cy='200' rx='95' ry='40'/%3E%3Cellipse class='c' cx='160' cy='200' rx='65' ry='27'/%3E%3Cellipse class='c' cx='160' cy='200' rx='36' ry='16'/%3E%3Cellipse class='c' cx='650' cy='620' rx='145' ry='60'/%3E%3Cellipse class='c' cx='650' cy='620' rx='110' ry='46'/%3E%3Cellipse class='c' cx='650' cy='620' rx='75' ry='32'/%3E%3Cellipse class='c' cx='650' cy='620' rx='42' ry='19'/%3E%3Cellipse class='c' cx='700' cy='150' rx='90' ry='42'/%3E%3Cellipse class='c' cx='700' cy='150' rx='62' ry='29'/%3E%3Cellipse class='c' cx='700' cy='150' rx='35' ry='17'/%3E%3Cellipse class='c' cx='100' cy='650' rx='80' ry='35'/%3E%3Cellipse class='c' cx='100' cy='650' rx='52' ry='23'/%3E%3Cellipse class='c' cx='100' cy='650' rx='26' ry='12'/%3E%3C/svg%3E");
-    background-size: 800px 800px;
-    background-repeat: repeat;
+  .mesh-bg span {
+    position: absolute; border-radius: 50%;
+    filter: blur(80px); opacity: 0.55;
+    will-change: transform;
+  }
+  .mesh-bg span:nth-child(1) {
+    width: 65vw; height: 65vw; top: -15%; left: -10%;
+    background: radial-gradient(circle, #f5ede0, #eddcc8);
+    animation: meshMove1 18s ease-in-out infinite;
+  }
+  .mesh-bg span:nth-child(2) {
+    width: 55vw; height: 55vw; top: 10%; right: -15%;
+    background: radial-gradient(circle, #e2dff0, #cdd5e8);
+    animation: meshMove2 22s ease-in-out infinite;
+  }
+  .mesh-bg span:nth-child(3) {
+    width: 50vw; height: 50vw; bottom: -10%; left: 20%;
+    background: radial-gradient(circle, #dce8f0, #cfe0ec);
+    animation: meshMove3 19s ease-in-out infinite;
+  }
+  .mesh-bg span:nth-child(4) {
+    width: 40vw; height: 40vw; top: 35%; left: 35%;
+    background: radial-gradient(circle, rgba(200,90,42,0.12), transparent);
+    animation: meshMove4 25s ease-in-out infinite;
+  }
+  .mesh-bg span:nth-child(5) {
+    width: 35vw; height: 35vw; bottom: 20%; right: 10%;
+    background: radial-gradient(circle, #eee5d8, #e8ddd0);
+    animation: meshMove5 20s ease-in-out infinite;
   }
 
-  /* ── BREADCRUMB ── */
-  .breadcrumb {
-    display: flex; align-items: center; gap: 0.5rem;
-    font-family: 'DM Mono', monospace; font-size: 0.7rem;
-    letter-spacing: 0.06em; text-transform: uppercase;
-    color: var(--muted); margin-bottom: 1.2rem;
+  /* ── PROGRESS BAR ── */
+  #progress-bar {
+    position: fixed; top: 0; left: 0; z-index: 200;
+    height: 2px; width: 0%;
+    background: var(--accent);
+    transition: width 0.1s linear;
+    pointer-events: none;
   }
-  .breadcrumb a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
-  .breadcrumb a:hover { color: var(--accent); }
-  .breadcrumb span { color: var(--accent); }
-  .breadcrumb svg { opacity: 0.5; flex-shrink: 0; }
 
 </style>
 </head>
@@ -114,11 +139,6 @@
 </nav>
 
 <div class="page-wrap">
-  <nav class="breadcrumb" aria-label="breadcrumb">
-  <a href="index.html">Home</a>
-  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
-  <span>Hobbies</span>
-</nav>
   <header class="page-header fade-in">
     <h1>Hobbies</h1>
     <p class="sub">Beyond the research</p>
@@ -129,8 +149,10 @@
     <div class="hobby-grid">
 
       <div class="hobby-card">
-        <svg class="hobby-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+        <!-- Goodreads "g" logo -->
+        <svg class="hobby-icon" width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="100" height="100" rx="8" fill="#F4F1EA"/>
+          <text x="50" y="72" font-family="Georgia, serif" font-size="72" font-weight="bold" text-anchor="middle" fill="#553B08">g</text>
         </svg>
         <div class="hobby-title">Reading</div>
         <div class="hobby-desc">
@@ -143,8 +165,21 @@
       </div>
 
       <div class="hobby-card">
-        <svg class="hobby-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+        <!-- Instagram gradient icon -->
+        <svg class="hobby-icon" width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="igGrad" cx="30%" cy="107%" r="150%">
+              <stop offset="0%" stop-color="#fdf497"/>
+              <stop offset="5%" stop-color="#fdf497"/>
+              <stop offset="45%" stop-color="#fd5949"/>
+              <stop offset="60%" stop-color="#d6249f"/>
+              <stop offset="90%" stop-color="#285AEB"/>
+            </radialGradient>
+          </defs>
+          <rect width="100" height="100" rx="22" fill="url(#igGrad)"/>
+          <rect x="18" y="18" width="64" height="64" rx="18" fill="none" stroke="white" stroke-width="6"/>
+          <circle cx="50" cy="50" r="16" fill="none" stroke="white" stroke-width="6"/>
+          <circle cx="71" cy="29" r="5" fill="white"/>
         </svg>
         <div class="hobby-title">Photography</div>
         <div class="hobby-desc">
@@ -176,6 +211,17 @@
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }});
   }, { threshold: 0.05 });
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  /* ── SCROLL PROGRESS BAR ── */
+  const progressBar = document.getElementById('progress-bar');
+  function updateProgress() {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    progressBar.style.width = (docHeight > 0 ? (scrollTop / docHeight) * 100 : 0) + '%';
+  }
+  window.addEventListener('scroll', updateProgress, {passive: true});
+  updateProgress();
+
 </script>
 </body>
 </html>
