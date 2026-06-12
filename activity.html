@@ -19,7 +19,7 @@
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   html{scroll-behavior:smooth;}
   body{font-family:'DM Sans',sans-serif;color:var(--ink);font-size:clamp(15px,1.1vw,17px);line-height:1.75;min-height:100vh;}
-  nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0.9rem var(--gutter);background:rgba(245,240,232,0.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--rule);}
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0.9rem var(--gutter);background:rgba(232,237,230,0.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--rule);}
   .nav-logo{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:1.45rem;color:var(--ink);text-decoration:none;letter-spacing:0.12em;white-space:nowrap;}
   .nav-links{display:flex;gap:2rem;list-style:none;flex-wrap:wrap;}
   .nav-links a{font-size:0.74rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.2s;white-space:nowrap;}
@@ -58,7 +58,7 @@
 
   .mesh-bg {
     position: fixed; inset: 0; z-index: -1; overflow: hidden;
-    background: #f0ece2;
+    background: #e8ede6;
   }
   .mesh-bg span {
     position: absolute; border-radius: 50%;
@@ -67,17 +67,17 @@
   }
   .mesh-bg span:nth-child(1) {
     width: 65vw; height: 65vw; top: -15%; left: -10%;
-    background: radial-gradient(circle, #f5ede0, #eddcc8);
+    background: radial-gradient(circle, #dce8d8, #c8dcc4);
     animation: meshMove1 18s ease-in-out infinite;
   }
   .mesh-bg span:nth-child(2) {
     width: 55vw; height: 55vw; top: 10%; right: -15%;
-    background: radial-gradient(circle, #e2dff0, #cdd5e8);
+    background: radial-gradient(circle, #e4ede0, #d0e0cb);
     animation: meshMove2 22s ease-in-out infinite;
   }
   .mesh-bg span:nth-child(3) {
     width: 50vw; height: 50vw; bottom: -10%; left: 20%;
-    background: radial-gradient(circle, #dce8f0, #cfe0ec);
+    background: radial-gradient(circle, #f0ece4, #e8e4d8);
     animation: meshMove3 19s ease-in-out infinite;
   }
   .mesh-bg span:nth-child(4) {
@@ -87,7 +87,7 @@
   }
   .mesh-bg span:nth-child(5) {
     width: 35vw; height: 35vw; bottom: 20%; right: 10%;
-    background: radial-gradient(circle, #eee5d8, #e8ddd0);
+    background: radial-gradient(circle, #f2ede4, #e8e2d4);
     animation: meshMove5 20s ease-in-out infinite;
   }
   /* ── SIDE RAIL ── */
@@ -126,7 +126,7 @@
   /* ── PROGRESS BAR ── */
   #progress-bar {
     position: fixed; top: 0; left: 0; z-index: 200;
-    height: 2px; width: 0%;
+    height: 4px; width: 0%;
     background: var(--accent);
     transition: width 0.1s linear;
     pointer-events: none;
@@ -190,6 +190,24 @@
 
     <div class="tl-year" id="y2025">2025</div>
     <div class="tl-event">
+      <span class="tl-date">27 Nov 2025</span>
+      <div class="tl-text">Prof. Ricardo Baeza-Yates from KTH Royal Institute of Technology visited IIITB and gave a talk on "The Limitations of Data, Machine Learning and Us", and interacted with WSL research scholars.
+        <div class="tl-img"><img src="images/ricardovisit26.jpg" alt="Prof. Ricardo Baeza-Yates visit" /></div>
+      </div>
+    </div>
+    <div class="tl-event">
+      <span class="tl-date">24 Nov 2025</span>
+      <div class="tl-text">Presented Samvaad Talk on <em>"Representation and Intervention Modeling for Sustainable Development Goals"</em>.
+        <div class="tl-img"><img src="images/samvaadtalk25.jpeg" alt="Samvaad Talk, November 2025" /></div>
+      </div>
+    </div>
+    <div class="tl-event">
+      <span class="tl-date">11 Oct 2025</span>
+      <div class="tl-text">Shri Shoyabahmed Kalal, Director, State Support Mission at NITI Aayog, visited the LKI centre to review its progress.
+        <div class="tl-img"><img src="images/shoyebvisit25.jpeg" alt="NITI Aayog visit, October 2025" /></div>
+      </div>
+    </div>
+    <div class="tl-event">
       <span class="tl-date">4 Sep 2025</span>
       <span class="tl-text">Arpitha Srivathsa Malavalli presented <em>"Engineering Resilience: An Energy-Based Approach to Sustainable Behavioural Interventions"</em> at EUMAS 2025, online.</span>
     </div>
@@ -216,24 +234,6 @@
     <div class="tl-event">
       <span class="tl-date">15 Feb 2025</span>
       <span class="tl-text">WSL hosted a delegation from the NITI for States team — an integrated platform by NITI Aayog to foster learning, sharing, and action towards a Viksit Bharat.</span>
-    </div>
-    <div class="tl-event">
-      <span class="tl-date">27 Nov 2025</span>
-      <div class="tl-text">Prof. Ricardo Baeza-Yates from KTH Royal Institute of Technology visited IIITB and interacted with WSL research scholars.
-        <div class="tl-img"><img src="images/ricardovisit26.jpg" alt="Prof. Ricardo Baeza-Yates visit" /></div>
-      </div>
-    </div>
-    <div class="tl-event">
-      <span class="tl-date">24 Nov 2025</span>
-      <div class="tl-text">Presented Samvaad Talk on <em>"Representation and Intervention Modeling for Sustainable Development Goals"</em>.
-        <div class="tl-img"><img src="images/samvaadtalk25.jpeg" alt="Samvaad Talk, November 2025" /></div>
-      </div>
-    </div>
-    <div class="tl-event">
-      <span class="tl-date">11 Oct 2025</span>
-      <div class="tl-text">Shri Shoyabahmed Kalal visited the LKI centre to review its progress.
-        <div class="tl-img"><img src="images/shoyebvisit25.jpeg" alt="NITI Aayog visit, October 2025" /></div>
-      </div>
     </div>
 
     <div class="tl-year" id="y2024">2024</div>
@@ -342,6 +342,10 @@
     <div class="tl-event">
       <span class="tl-date">18–20 Nov 2019</span>
       <span class="tl-text">Presented Cogno Web Observatory at Bangalore Tech Summit 2019 alongside Prof. Srinath Srinivasa, Raksha P S, and Jayati Deshmukh.</span>
+    </div>
+    <div class="tl-event">
+      <span class="tl-date">1 Aug 2019</span>
+      <span class="tl-text">Joined as Junior Research Fellow at Web Science Lab, IIIT Bangalore.</span>
     </div>      </div>
     </section>
   </div><!-- /page-with-rail -->

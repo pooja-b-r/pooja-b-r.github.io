@@ -45,7 +45,7 @@
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; align-items: center; justify-content: space-between;
     padding: 0.9rem var(--gutter);
-    background: rgba(245, 240, 232, 0.9);
+    background: rgba(232, 237, 230, 0.92);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border-bottom: 1px solid var(--rule);
@@ -84,7 +84,7 @@
   .header-banner canvas { display: block; width: 100%; height: 100%; }
   .header-banner-overlay {
     position: absolute; inset: 0;
-    background: linear-gradient(to bottom, rgba(245,240,232,0) 0%, rgba(240,237,226,0.35) 72%, rgba(240,237,226,0.85) 100%);
+    background: linear-gradient(to bottom, rgba(232,237,230,0) 0%, rgba(220,230,218,0.35) 72%, rgba(220,230,218,0.85) 100%);
   }
 
   /* ── PAGE WRAPPER ── */
@@ -179,7 +179,6 @@
   .si-orcid    { color: #A6CE39; }
   .si-acm      { color: #0085CA; }
   .si-wsl      { color: var(--accent); }
-  .si-cv       { color: #666; }
 
 
 
@@ -192,7 +191,7 @@
 
   .mesh-bg {
     position: fixed; inset: 0; z-index: -1; overflow: hidden;
-    background: #f0ece2;
+    background: #e8ede6;
   }
   .mesh-bg span {
     position: absolute; border-radius: 50%;
@@ -201,17 +200,17 @@
   }
   .mesh-bg span:nth-child(1) {
     width: 65vw; height: 65vw; top: -15%; left: -10%;
-    background: radial-gradient(circle, #f5ede0, #eddcc8);
+    background: radial-gradient(circle, #dce8d8, #c8dcc4);
     animation: meshMove1 18s ease-in-out infinite;
   }
   .mesh-bg span:nth-child(2) {
     width: 55vw; height: 55vw; top: 10%; right: -15%;
-    background: radial-gradient(circle, #e2dff0, #cdd5e8);
+    background: radial-gradient(circle, #e4ede0, #d0e0cb);
     animation: meshMove2 22s ease-in-out infinite;
   }
   .mesh-bg span:nth-child(3) {
     width: 50vw; height: 50vw; bottom: -10%; left: 20%;
-    background: radial-gradient(circle, #dce8f0, #cfe0ec);
+    background: radial-gradient(circle, #f0ece4, #e8e4d8);
     animation: meshMove3 19s ease-in-out infinite;
   }
   .mesh-bg span:nth-child(4) {
@@ -221,7 +220,7 @@
   }
   .mesh-bg span:nth-child(5) {
     width: 35vw; height: 35vw; bottom: 20%; right: 10%;
-    background: radial-gradient(circle, #eee5d8, #e8ddd0);
+    background: radial-gradient(circle, #f2ede4, #e8e2d4);
     animation: meshMove5 20s ease-in-out infinite;
   }
 
@@ -463,7 +462,7 @@
   /* ── PROGRESS BAR ── */
   #progress-bar {
     position: fixed; top: 0; left: 0; z-index: 200;
-    height: 2px; width: 0%;
+    height: 4px; width: 0%;
     background: var(--accent);
     transition: width 0.1s linear;
     pointer-events: none;
@@ -546,10 +545,7 @@
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
         Web Science Lab
       </a>
-      <a class="social-icon si-cv" href="cv.pdf" target="_blank">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
-        CV
-      </a>
+
     </div>
   </div>
 </div><!-- /hero -->
