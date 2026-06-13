@@ -15,11 +15,11 @@
 <meta name="twitter:image" content="https://pooja-b-r.github.io/images/og-preview.jpg" />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <style>
-  :root { --ink:#1a1a18; --accent:#4a6048; --muted:#6a7068; --rule:#d0d4cc; --max:1100px; --gutter:clamp(1.5rem,5vw,4rem); }
+  :root { --ink:#1a1a18; --accent:#3a5070; --muted:#6a7278; --rule:#d8d8dc; --max:1100px; --gutter:clamp(1.5rem,5vw,4rem); }
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   html{scroll-behavior:smooth;}
   body{font-family:'DM Sans',sans-serif;color:var(--ink);font-size:clamp(15px,1.1vw,17px);line-height:1.75;min-height:100vh;}
-  nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0.9rem var(--gutter);background:rgba(232,235,228,0.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--rule);}
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0.9rem var(--gutter);background:rgba(248,247,245,0.78);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--rule);}
   .nav-logo{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:1.45rem;color:var(--ink);text-decoration:none;letter-spacing:0.12em;white-space:nowrap;}
   .nav-links{display:flex;gap:2rem;list-style:none;flex-wrap:wrap;}
   .nav-links a{font-size:0.74rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.2s;white-space:nowrap;}
@@ -50,47 +50,17 @@
   @media(max-width:600px){.nav-links{gap:1rem;}.nav-links a{font-size:0.68rem;}.memb-item{grid-template-columns:1fr;gap:0.2rem;}footer{flex-direction:column;align-items:flex-start;}}
 
 
-  /* ── ANIMATED MESH GRADIENT ── */
-  @keyframes meshMove1 { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(60px,-40px) scale(1.08)} }
-  @keyframes meshMove2 { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(-50px,55px) scale(1.06)} }
-  @keyframes meshMove3 { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(45px,40px) scale(1.1)} }
-  @keyframes meshMove4 { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(-60px,-35px) scale(1.05)} }
-  @keyframes meshMove5 { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(30px,60px) scale(1.07)} }
-
-  .mesh-bg {
-    position: fixed; inset: 0; z-index: -1; overflow: hidden;
-    background: #e8e8e4;
-  }
-  .mesh-bg span {
-    position: absolute; border-radius: 50%;
-    filter: blur(80px); opacity: 0.55;
-    will-change: transform;
-  }
-  .mesh-bg span:nth-child(1) {
-    width: 65vw; height: 65vw; top: -15%; left: -10%;
-    background: radial-gradient(circle, #d8e0d4, #c8d4c0);
-    animation: meshMove1 18s ease-in-out infinite;
-  }
-  .mesh-bg span:nth-child(2) {
-    width: 55vw; height: 55vw; top: 10%; right: -15%;
-    background: radial-gradient(circle, #e4e2dc, #d8d4cc);
-    animation: meshMove2 22s ease-in-out infinite;
-  }
-  .mesh-bg span:nth-child(3) {
-    width: 50vw; height: 50vw; bottom: -10%; left: 20%;
-    background: radial-gradient(circle, #dce0d8, #ccd0c4);
-    animation: meshMove3 19s ease-in-out infinite;
-  }
-  .mesh-bg span:nth-child(4) {
-    width: 40vw; height: 40vw; top: 35%; left: 35%;
-    background: radial-gradient(circle, #e8e4e0, transparent);
-    animation: meshMove4 25s ease-in-out infinite;
-  }
-  .mesh-bg span:nth-child(5) {
-    width: 35vw; height: 35vw; bottom: 20%; right: 10%;
-    background: radial-gradient(circle, #d4d8d0, #c8ccc4);
-    animation: meshMove5 20s ease-in-out infinite;
-  }
+  /* ── FROSTED GLASS BACKGROUND ── */
+  @keyframes bgDrift1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(50px,-35px) scale(1.06)}}
+  @keyframes bgDrift2{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-45px,50px) scale(1.05)}}
+  @keyframes bgDrift3{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(35px,35px) scale(1.07)}}
+  .mesh-bg{position:fixed;inset:0;z-index:-1;overflow:hidden;background:#f2f0ed;}
+  .mesh-bg span{position:absolute;border-radius:50%;will-change:transform;}
+  .mesh-bg span:nth-child(1){width:80vw;height:80vw;top:-25%;left:-20%;background:radial-gradient(circle,rgba(190,200,220,0.45),transparent 70%);filter:blur(90px);animation:bgDrift1 38s ease-in-out infinite;}
+  .mesh-bg span:nth-child(2){width:70vw;height:70vw;bottom:-20%;right:-15%;background:radial-gradient(circle,rgba(200,195,185,0.40),transparent 70%);filter:blur(90px);animation:bgDrift2 42s ease-in-out infinite;}
+  .mesh-bg span:nth-child(3){width:60vw;height:60vw;top:20%;right:10%;background:radial-gradient(circle,rgba(185,200,195,0.35),transparent 70%);filter:blur(80px);animation:bgDrift3 35s ease-in-out infinite;}
+  .mesh-bg span:nth-child(4){width:50vw;height:50vw;bottom:10%;left:15%;background:radial-gradient(circle,rgba(205,200,210,0.30),transparent 70%);filter:blur(80px);animation:bgDrift1 45s ease-in-out infinite reverse;}
+  .mesh-bg span:nth-child(5){width:40vw;height:40vw;top:40%;left:40%;background:radial-gradient(circle,rgba(195,205,215,0.25),transparent 70%);filter:blur(70px);animation:bgDrift2 32s ease-in-out infinite reverse;}
 
   /* ── PROGRESS BAR ── */
   #progress-bar {
@@ -111,6 +81,25 @@
     background-repeat: repeat;
     background-size: 300px 300px;
   }
+
+  /* ── GLASS CARD ENHANCEMENT ── */
+  .pub-item, .edu-item, .exp-item, .memb-item,
+  .contact-card, .now-card, .hobby-card, .tl-event,
+  .profile-row, .contact-row {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  .contact-card, .now-card {
+    background: rgba(255,255,255,0.48) !important;
+    border-color: rgba(255,255,255,0.65) !important;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.04), 0 1px 0 rgba(255,255,255,0.8) inset;
+  }
+  .hobby-card {
+    background: rgba(255,255,255,0.42) !important;
+    border-color: rgba(255,255,255,0.6) !important;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04), 0 1px 0 rgba(255,255,255,0.8) inset;
+  }
+
 </style>
 </head>
 <body>
