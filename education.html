@@ -17,9 +17,9 @@
 <style>
   :root {
     --ink: #1a1a18;
-    --accent: #7a6070;
-    --muted: #7a7670;
-    --rule: #d8d3c8;
+    --accent: #4a6048;
+    --muted: #6a7068;
+    --rule: #d0d4cc;
     --max: 1100px;
     --gutter: clamp(1.5rem, 5vw, 4rem);
   }
@@ -36,7 +36,7 @@
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; align-items: center; justify-content: space-between;
     padding: 0.9rem var(--gutter);
-    background: rgba(242, 239, 234, 0.93);
+    background: rgba(232,235,228,0.92);
     backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
     border-bottom: 1px solid var(--rule);
   }
@@ -130,7 +130,7 @@
 
   .mesh-bg {
     position: fixed; inset: 0; z-index: -1; overflow: hidden;
-    background: #edeae4;
+    background: #e8e8e4;
   }
   .mesh-bg span {
     position: absolute; border-radius: 50%;
@@ -139,27 +139,27 @@
   }
   .mesh-bg span:nth-child(1) {
     width: 65vw; height: 65vw; top: -15%; left: -10%;
-    background: radial-gradient(circle, #f0ece4, #e4ddd4);
+    background: radial-gradient(circle, #d8e0d4, #c8d4c0);
     animation: meshMove1 18s ease-in-out infinite;
   }
   .mesh-bg span:nth-child(2) {
     width: 55vw; height: 55vw; top: 10%; right: -15%;
-    background: radial-gradient(circle, #f2ede4, #e8e2d8);
+    background: radial-gradient(circle, #e4e2dc, #d8d4cc);
     animation: meshMove2 22s ease-in-out infinite;
   }
   .mesh-bg span:nth-child(3) {
     width: 50vw; height: 50vw; bottom: -10%; left: 20%;
-    background: radial-gradient(circle, #e6e4e0, #d8d4cc);
+    background: radial-gradient(circle, #dce0d8, #ccd0c4);
     animation: meshMove3 19s ease-in-out infinite;
   }
   .mesh-bg span:nth-child(4) {
     width: 40vw; height: 40vw; top: 35%; left: 35%;
-    background: radial-gradient(circle, rgba(140,130,118,0.1), transparent);
+    background: radial-gradient(circle, #e8e4e0, transparent);
     animation: meshMove4 25s ease-in-out infinite;
   }
   .mesh-bg span:nth-child(5) {
     width: 35vw; height: 35vw; bottom: 20%; right: 10%;
-    background: radial-gradient(circle, #f0ece6, #e8e2da);
+    background: radial-gradient(circle, #d4d8d0, #c8ccc4);
     animation: meshMove5 20s ease-in-out infinite;
   }
 

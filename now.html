@@ -15,30 +15,30 @@
 <title>Now — Pooja Bassin</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,400&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <style>
-  :root { --ink:#1a1a18; --accent:#7a6070; --muted:#7a7670; --rule:#d8d3c8; --max:1100px; --gutter:clamp(1.5rem,5vw,4rem); }
+  :root { --ink:#1a1a18; --accent:#4a6048; --muted:#6a7068; --rule:#d0d4cc; --max:1100px; --gutter:clamp(1.5rem,5vw,4rem); }
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   html{scroll-behavior:smooth;}
   body{font-family:'DM Sans',sans-serif;color:var(--ink);font-size:clamp(15px,1.1vw,17px);line-height:1.75;min-height:100vh;}
 
-  /* ── ANIMATED MESH GRADIENT ── */
+  /* ── ANIMATED MESH GRADIENT — SAGE / WARM GREY / STONE ── */
   @keyframes meshMove1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(60px,-40px) scale(1.08)}}
   @keyframes meshMove2{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-50px,55px) scale(1.06)}}
   @keyframes meshMove3{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(45px,40px) scale(1.1)}}
   @keyframes meshMove4{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-60px,-35px) scale(1.05)}}
   @keyframes meshMove5{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(30px,60px) scale(1.07)}}
-  .mesh-bg{position:fixed;inset:0;z-index:-1;overflow:hidden;background:#edeae4;}
-  .mesh-bg span{position:absolute;border-radius:50%;filter:blur(80px);opacity:0.55;will-change:transform;}
-  .mesh-bg span:nth-child(1){width:65vw;height:65vw;top:-15%;left:-10%;background:radial-gradient(circle,#f0ece4,#e4ddd4);animation:meshMove1 18s ease-in-out infinite;}
-  .mesh-bg span:nth-child(2){width:55vw;height:55vw;top:10%;right:-15%;background:radial-gradient(circle,#f2ede4,#e8e2d8);animation:meshMove2 22s ease-in-out infinite;}
-  .mesh-bg span:nth-child(3){width:50vw;height:50vw;bottom:-10%;left:20%;background:radial-gradient(circle,#e6e4e0,#d8d4cc);animation:meshMove3 19s ease-in-out infinite;}
-  .mesh-bg span:nth-child(4){width:40vw;height:40vw;top:35%;left:35%;background:radial-gradient(circle,rgba(140,130,118,0.1),transparent);animation:meshMove4 25s ease-in-out infinite;}
-  .mesh-bg span:nth-child(5){width:35vw;height:35vw;bottom:20%;right:10%;background:radial-gradient(circle,#f0ece6,#e8e2da);animation:meshMove5 20s ease-in-out infinite;}
+  .mesh-bg{position:fixed;inset:0;z-index:-1;overflow:hidden;background:#e8e8e4;}
+  .mesh-bg span{position:absolute;border-radius:50%;filter:blur(80px);opacity:0.65;will-change:transform;}
+  .mesh-bg span:nth-child(1){width:65vw;height:65vw;top:-15%;left:-10%;background:radial-gradient(circle,#d8e0d4,#c8d4c0);animation:meshMove1 19s ease-in-out infinite;}
+  .mesh-bg span:nth-child(2){width:55vw;height:55vw;top:10%;right:-15%;background:radial-gradient(circle,#e4e2dc,#d8d4cc);animation:meshMove2 23s ease-in-out infinite;}
+  .mesh-bg span:nth-child(3){width:50vw;height:50vw;bottom:-10%;left:20%;background:radial-gradient(circle,#dce0d8,#ccd0c4);animation:meshMove3 20s ease-in-out infinite;}
+  .mesh-bg span:nth-child(4){width:40vw;height:40vw;top:35%;left:35%;background:radial-gradient(circle,#e8e4e0,transparent);animation:meshMove4 26s ease-in-out infinite;}
+  .mesh-bg span:nth-child(5){width:35vw;height:35vw;bottom:20%;right:10%;background:radial-gradient(circle,#d4d8d0,#c8ccc4);animation:meshMove5 21s ease-in-out infinite;}
 
   /* ── PROGRESS BAR ── */
   #progress-bar{position:fixed;top:0;left:0;z-index:200;height:4px;width:0%;background:var(--accent);transition:width 0.1s linear;pointer-events:none;}
 
   /* ── NAV ── */
-  nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0.9rem var(--gutter);background:rgba(242,239,234,0.93);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--rule);}
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0.9rem var(--gutter);background:rgba(232,235,228,0.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--rule);}
   .nav-logo{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:1.45rem;color:var(--ink);text-decoration:none;letter-spacing:0.12em;white-space:nowrap;}
   .nav-links{display:flex;gap:2rem;list-style:none;flex-wrap:wrap;}
   .nav-links a{font-size:0.74rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.2s;white-space:nowrap;}
